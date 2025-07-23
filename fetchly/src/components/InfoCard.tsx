@@ -3,20 +3,20 @@ import React from "react";
 export const InfoCard = () => {
     return (
         <div className="fixed hidden lg:block bottom-6 right-6 z-50">
-            <div className="rounded-xl bg-gray-400 overflow-hidden relative text-center p-4 group items-center flex flex-col max-w-xs hover:shadow-2xl transition-all duration-300 shadow-xl">
+            <div className="rounded-xl bg-black-600 overflow-hidden relative text-center p-4 group items-center flex flex-col max-w-xs hover:shadow-2xl transition-all duration-300 shadow-xl">
                 <div className="text-black-100 group-hover:scale-105 transition-all">
                     <svg
                         className="w-8 h-8"
                         stroke="currentColor"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
                             d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
                         ></path>
                     </svg>
                 </div>
