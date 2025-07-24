@@ -17,6 +17,7 @@ type Article = {
 
 interface ArticlesContextProps {
     articles: Article[];
+    latest: Article[];
     loading: boolean;
     error: string | null;
 }
@@ -25,16 +26,19 @@ const ArticlesContext = createContext<ArticlesContextProps | undefined>(undefine
 
 export const ArticlesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [articles, setArticles] = useState<Article[]>([]);
+    const [latest, setLatest] = useState<Article[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const res = await fetch("https://dev.to/api/articles?per_page=10");
+                const res = await fetch("https://dev.to/api/articles?tag=dev&?per_page=10");
                 if (!res.ok) throw new Error("Failed to fetch articles");
-                const data = await res.json();
-                setArticles(data);
+                const data: Article[] = await res.json();
+
+                setLatest(data.slice(0, 4));
+                setArticles(data.slice(5, 10));
             } catch (err: any) {
                 setError(err.message);
             } finally {
@@ -45,8 +49,9 @@ export const ArticlesProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         fetchArticles();
     }, []);
 
+
     return (
-        <ArticlesContext.Provider value={{ articles, loading, error }}>
+        <ArticlesContext.Provider value={{ articles, latest, loading, error }}>
             {children}
         </ArticlesContext.Provider>
     );

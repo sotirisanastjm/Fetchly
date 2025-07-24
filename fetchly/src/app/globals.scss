@@ -202,18 +202,18 @@ body {
 }
 
 section {
-  @apply mt-12;
+  @apply mb-[10rem];
 }
 
 .menu-item:hover {
   text-shadow: 0 0 2px #808080, 0 0 10px #808080, 0 0 20px #808080;
 }
 
-.card-slider {
+.card-item {
   width: 250px;
   padding: 24px 32px;
-  border-radius: 12px;
-  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.6) 40%, transparent 70%);
+  border-radius: 24px;
+  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.8) 40%, transparent 70%);
   color: white;
   opacity: 0.8;
   backdrop-filter: blur(100px);
@@ -221,7 +221,28 @@ section {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card-slider:hover {
+.card-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(78, 78, 78, 1);
+  box-shadow: 0 6px 18px #808080;
+  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+  cursor: pointer;
+}
+
+.hero-item {
+  color:#101010!important;
+  width: 250px;
+  padding: 24px 32px;
+  border-radius: 24px;
+  background: radial-gradient(circle at top left, #f0f0f0 0%, transparent 110%);
+  opacity: 0.9;
+  backdrop-filter: blur(100px);
+  box-shadow: 0 4px 12px rgba(78, 78, 78, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-item:hover:not(.hero) {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px #f0f0f0a5;
+  background: radial-gradient(circle at top left, #f0f0f0 5%, transparent 110%);
+  cursor: pointer;
 }
