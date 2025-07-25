@@ -8,7 +8,7 @@ type Article = {
     description: string;
     url: string;
     tag_list: string[];
-    published_at: string;
+    published_at: Date;
     user: {
         name: string;
         profile_image: string;
@@ -17,41 +17,47 @@ type Article = {
 
 interface ArticlesContextProps {
     articles: Article[];
-    latest: Article[];
     loading: boolean;
     error: string | null;
+    activeTag: string | null;
+    tags: string[];
+    fetchArticlesByTag: (tag: string) => void;
 }
 
 const ArticlesContext = createContext<ArticlesContextProps | undefined>(undefined);
 
 export const ArticlesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [articles, setArticles] = useState<Article[]>([]);
-    const [latest, setLatest] = useState<Article[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [activeTag, setActiveTag] = useState<string | null>(null);
+
+    const tags = ['Angular', 'Nextjs', 'React', 'Typescript', 'JavaScript', 'Tailwind', 'NodeJs', 'WebDev'];
+
+    const fetchArticlesByTag = async (tag: string) => {
+        setLoading(true);
+        setActiveTag(tag);
+        try {
+            const res = await fetch(`https://dev.to/api/articles?tag=${encodeURIComponent(tag.toLowerCase())}&per_page=6`);
+            if (!res.ok) throw new Error("Failed to fetch articles");
+            const data: Article[] = await res.json();
+            setArticles(data);
+            setError(null);
+        } catch (err: any) {
+            setError(err.message);
+            setArticles([]);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
-        const fetchArticles = async () => {
-            try {
-                const res = await fetch("https://dev.to/api/articles?tag=dev&?per_page=10");
-                if (!res.ok) throw new Error("Failed to fetch articles");
-                const data: Article[] = await res.json();
-
-                setLatest(data.slice(0, 4));
-                setArticles(data.slice(5, 10));
-            } catch (err: any) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchArticles();
+        fetchArticlesByTag(tags[0]);
     }, []);
 
 
     return (
-        <ArticlesContext.Provider value={{ articles, latest, loading, error }}>
+        <ArticlesContext.Provider value={{ articles, loading, error, activeTag, tags, fetchArticlesByTag }}>
             {children}
         </ArticlesContext.Provider>
     );

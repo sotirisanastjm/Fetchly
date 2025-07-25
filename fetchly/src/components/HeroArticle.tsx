@@ -1,39 +1,24 @@
 'use client';
 
-import { useArticles } from '@/context/ArticleContext';
 import Link from 'next/link';
+import hero from '../assets/images/hero.jpg'
 
 export default function HeroArticle() {
-    const { articles, loading, error } = useArticles();
 
     return (
-        <section className='container mx-auto mt-12 px-4 lg:px-0'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 [grid-auto-rows:1fr]'>
-                <div
-                    className={`hero-item hero min-h-[200px] !w-full col-span-2 row-span-2 lg:col-span-2 lg:row-span-3`}
-                >
-                    <div className='text-2xl lg:text-[64px] font-bold leading-tight'>
-                        Discover <br /> Real-Time Tech Articles
+        <section className='container mx-auto lg:mt-12 px-4 lg:px-0'>
+            <div className={`bg-black overflow-hidden relative px-8 lg:px-14 py-12 lg:py-18 rounded-2xl flex flex-col justify-end min-h-[350px] lg:min-h-[600px]`}>
+                <img className='absolute h-full w-full z-0 inset-0' src={hero.src} alt="Image with green-blue effect" />
+                <div className='absolute h-full w-full z-0 inset-0 bg-gray-800/20 backdrop-blur-xs' />
+                <div className='space-y-2 absolute'>
+                    <div className='text-2xl lg:text-[48px] font-bold'>
+                        Discover Real-Time Tech Articles
                     </div>
-                    <div className='mt-4 text-2xl lg:text-4xl max-w-[40ch]'>
-                        Curated stories from developers, by developers — always fresh.
+                    <div className='text-xl lg:text-4xl'>
+                        Curated stories from developers, by developers always fresh.
                     </div>
-
                 </div>
-                {articles.map((article, index) => {
-                    return (
-                        <div
-                            key={article.id || index}
-                            className={`hero-item min-h-[200px] !w-full space-y-2 ${index == 3 && 'lg:row-span-2'}`}
-                        >
-                            <div className='text-xl font-bold'>{article.title}</div>
-                            <div className='text-lg'>{article.description}</div>
-                            {/* <Link href={article.url}>Read More</Link> */}
-                        </div>
-                    );
-                })}
             </div>
-
         </section>
     );
 }

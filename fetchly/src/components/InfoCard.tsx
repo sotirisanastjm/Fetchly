@@ -3,8 +3,8 @@ import React from "react";
 export const InfoCard = () => {
     return (
         <div className="fixed hidden lg:block bottom-6 right-6 z-50">
-            <div className="rounded-xl bg-black-600 overflow-hidden relative text-center p-4 group items-center flex flex-col max-w-xs hover:shadow-2xl transition-all duration-300 shadow-xl">
-                <div className="text-black-100 group-hover:scale-105 transition-all">
+            <div className="rounded-xl bg-gray-200/10  backdrop-blur-2xl overflow-hidden relative text-center p-4 group items-center flex flex-col max-w-xs hover:shadow-2xl transition-all duration-300 shadow-xl">
+                <div className="group-hover:scale-105 transition-all">
                     <svg
                         className="w-8 h-8"
                         stroke="currentColor"
@@ -21,11 +21,11 @@ export const InfoCard = () => {
                     </svg>
                 </div>
                 <div className="group-hover:pb-10 transition-all duration-300 ">
-                    <h2 className="font-semibold text-black-100 text-sm">Anastasiadis<br />Sotiris</h2>
-                    {/* <p className="text-black-100 text-xs">@junior_developer</p> */}
+                    <h2 className="font-semibold text-sm">Anastasiadis<br />Sotiris</h2>
+                    {/* <p className="text-xs">@Software_Developer</p> */}
                 </div>
                 <div className="flex items-center transition-all duration-300  group-hover:bottom-3 -bottom-full absolute gap-2 justify-evenly w-full">
-                    <div className="flex gap-3 text-2xl text-black-100 p-1 hover:p-2 transition-all duration-300  rounded-full shadow-sm">
+                    <div className="flex gap-3 text-2xl p-1 hover:p-2 transition-all duration-300  rounded-full shadow-sm">
                         <a href="https://github.com/sotirisanastjm" target="_blank" aria-label="Github" className="hover:scale-110 transition-all duration-300 ">
                             <svg
                                 width="24px"

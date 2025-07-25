@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import '../assets/scss/navigation.scss';
+
+
+@layer utilities {
+  .bg-white-custom {
+    background-color: #ffffff;
+  }
+
+  .bg-gray-blue-100 {
+    background-color: #9cadbf;
+  }
+
+  .bg-gray-blue-200 {
+    background-color: #8fabcc;
+  }
+
+  .bg-slate-dark {
+    background-color: #1c262e;
+  }
+
+  .bg-slate-navy {
+    background-color: #293642;
+  }
+
+  .bg-black-soft {
+    background-color: #141a1f;
+  }
+
+  .bg-navy-steel {
+    background-color: #21364a;
+  }
+
+  .bg-gray-light {
+    background-color: #e5e8eb;
+  }
+
+  .bg-midnight {
+    background-color: #0f1a24;
+  }
+
+  .bg-blue-pastel {
+    background-color: #d1e3f2;
+  }
+
+  .text-white-custom {
+    color: #ffffff;
+  }
+
+  .text-gray-blue-100 {
+    color: #9cadbf;
+  }
+
+  .text-gray-blue-200 {
+    color: #8fabcc;
+  }
+
+  .text-slate-dark {
+    color: #1c262e;
+  }
+
+  .text-slate-navy {
+    color: #293642;
+  }
+
+  .text-black-soft {
+    color: #141a1f;
+  }
+
+  .text-navy-steel {
+    color: #21364a;
+  }
+
+  .text-gray-light {
+    color: #e5e8eb;
+  }
+
+  .text-midnight {
+    color: #0f1a24;
+  }
+
+  .text-blue-pastel {
+    color: #d1e3f2;
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 16px rgba(255, 255, 255, 0.5),
+      0 0 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .text-shadow-neon-blue {
+    text-shadow: 0 0 4px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+}
+
+
+
+body {
+  background: #141a1f !important;
+  color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  @apply mb-[10rem];
+}
