@@ -3,7 +3,7 @@
 export default function ArticleLoader() {
 
     return (
-        <div className="px-8 h-full py-6 min-h-[200px] bg-slate-800 rounded-2xl animate-pulse">
+        <div className="px-8 h-full py-6 min-h-[200px] bg-slate-800 rounded-3xl animate-pulse">
             <div className="flex flex-col h-full gap-4 justify-between">
                 <div className="flex flex-row gap-2 justify-between">
                     <div className="flex flex-wrap gap-2">

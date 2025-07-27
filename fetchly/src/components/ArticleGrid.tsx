@@ -15,7 +15,7 @@ export default function ArticleGrid() {
                 {tags.map((tag) => (
                     <button
                         key={tag}
-                        className={` ${tag == activeTag && 'bg-slate-dark'} ${tag != activeTag && 'hover:bg-slate-500 hover:cursor-pointer hover:scale-[1.02] transition-all duration-200'} px-4 py-2 text-sm font-bold uppercase rounded-2xl bg-slate-700 text-white transition`}
+                        className={` ${tag == activeTag && 'bg-slate-dark'} ${tag != activeTag && 'hover:bg-slate-500 hover:cursor-pointer hover:scale-[1.02] transition-all duration-200'} px-4 py-2 text-sm font-bold uppercase rounded-3xl bg-slate-700 text-white transition`}
                         onClick={() => tag != activeTag ? fetchArticlesByTag(tag) : null}
                     >
                         {tag}
