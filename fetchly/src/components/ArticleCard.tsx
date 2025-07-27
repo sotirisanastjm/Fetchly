@@ -32,7 +32,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
     return (
         <Link href={article.url}>
-            <div className="px-8 h-full py-6 min-h-[200px] bg-slate-dark rounded-2xl">
+            <div className="hover:scale-[1.03] hover:shadow-xl shadow-gray-600 duration-300 transition-all px-8 h-full py-6 min-h-[200px] bg-slate-dark rounded-2xl">
                 <div className="flex flex-col h-full gap-4 justify-between">
                     <div className="flex flex-row gap-2 justify-between">
                         <div className="flex flex-wrap gap-2">
