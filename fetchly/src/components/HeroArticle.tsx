@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import hero from '../assets/images/hero.jpg'
 
 export default function HeroArticle() {

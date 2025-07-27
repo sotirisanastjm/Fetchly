@@ -1,7 +1,6 @@
 'use client';
 
 import { useArticles } from '@/context/ArticleContext';
-import Link from 'next/link';
 import ArticleLoader from './ArticleLoader';
 import ArticleCard from './ArticleCard';
 

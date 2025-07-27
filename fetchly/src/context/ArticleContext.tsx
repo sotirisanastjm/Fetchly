@@ -43,10 +43,15 @@ export const ArticlesProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             const data: Article[] = await res.json();
             setArticles(data);
             setError(null);
-        } catch (err: any) {
-            setError(err.message);
+        } catch (err) {
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError("An unknown error occurred");
+            }
             setArticles([]);
-        } finally {
+        }
+        finally {
             setLoading(false);
         }
     };
