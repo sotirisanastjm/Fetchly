@@ -12,7 +12,7 @@ export default function BlockInfo() {
                 {/* <div className='text-xl lg:text-2xl text-gray-400'>Only the latest. Always relevant.</div> */}
             </div>
             <div className="grid grid-cols-1 lg:justify-items-center lg:grid-cols-2 gap-20">
-                <div className="rounded-3xl card-1 pt-14 min-h-[400px] lg:min-h-[300px] flex flex-col justify-end text-center">
+                <div className="rounded-3xl card-1 pt-14 min-h-[400px] lg:min-h-[300px] flex flex-col justify-end text-center w-full">
                     <Image
                         src={image1}
                         alt="Real-Time Articles"
@@ -26,7 +26,7 @@ export default function BlockInfo() {
                         <div className='text-lg lg:text-xl'>Fetched straight from DEV.to — always up to date, always developer-first.</div>
                     </div>
                 </div>
-                <div className="rounded-3xl card-2 pt-14 min-h-[400px] lg:min-h-[300px] flex flex-col justify-end text-center">
+                <div className="rounded-3xl card-2 pt-14 min-h-[400px] lg:min-h-[300px] flex flex-col justify-end text-center w-full">
                     <Image
                         src={image2}
                         alt="Smart Filters"

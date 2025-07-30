@@ -2,28 +2,6 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-type Article = {
-  id: number;
-  title: string;
-  description: string;
-  url: string;
-  tag_list: string[];
-  published_at: Date;
-  user: {
-    name: string;
-    profile_image: string;
-  };
-};
-
-interface ArticlesContextProps {
-  articles: Article[];
-  loading: boolean;
-  error: string | null;
-  activeTag: string | null;
-  tags: string[];
-  fetchArticlesByTag: (tag: string) => void;
-}
-
 const ArticlesContext = createContext<ArticlesContextProps | undefined>(undefined);
 
 export const ArticlesProvider: React.FC<{ children: React.ReactNode; initialArticles?: Article[], tag: string }> = ({
