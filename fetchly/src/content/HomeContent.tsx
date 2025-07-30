@@ -5,7 +5,7 @@ import BlockInfo from "@/components/BlockInfo";
 import HeroArticle from "@/components/HeroArticle";
 import { ArticlesProvider } from "@/context/ArticleContext";
 
-export default function HomeContent({ initialArticles, tag }: { initialArticles: any, tag: string }) {
+export default function HomeContent({ initialArticles, tag }: { initialArticles: Article[], tag: string }) {
   return (
     <ArticlesProvider initialArticles={initialArticles} tag={tag}>
       <HeroArticle />
