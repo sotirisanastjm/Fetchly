@@ -21,7 +21,7 @@ export default function BlockInfo() {
                         className="w-32 lg:w-48 h-32 py-2 lg:h-48 mb-auto self-center"
                     />
 
-                    <div className="space-y-1 w-full px-4 lg:px-12 pb-12 pt-8 bg-black/30 backdrop-blur-2xl rounded-t-4xl rounded-b-3xl">
+                    <div className="space-y-1 h-fit lg:h-full w-full px-4 lg:px-12 pb-12 pt-8 bg-black/30 backdrop-blur-2xl rounded-t-4xl rounded-b-3xl">
                         <h3 className='text-2xl lg:text-3xl font-bold'>Real-Time Articles</h3>
                         <div className='text-lg lg:text-xl'>Fetched straight from DEV.to — always up to date, always developer-first.</div>
                     </div>
@@ -35,9 +35,9 @@ export default function BlockInfo() {
                         className="w-32 lg:w-48 h-32 py-2 lg:h-48 mb-auto self-center"
                     />
 
-                    <div className="space-y-1 w-full px-4 lg:px-12 pb-12 pt-8 bg-black/30 backdrop-blur-2xl rounded-t-4xl rounded-b-3xl">
-                        <h3 className='text-2xl lg:text-3xl font-bold'>Smart Filters</h3>
-                        <div className='text-lg lg:text-xl'>Select your tech stack. Get only the stories that matter to you.</div>
+                    <div className="space-y-1 h-fit lg:h-full w-full px-4 lg:px-12 pb-12 pt-8 bg-black/30 backdrop-blur-2xl rounded-t-4xl rounded-b-3xl">
+                        <h3 className='text-2xl lg:text-3xl font-bold'>Tailored Feeds</h3>
+                        <div className='text-lg lg:text-xl'>Your tech stack, your stories — no noise.</div>
                     </div>
                 </div>
             </div>
