@@ -17,5 +17,5 @@ interface ArticlesContextProps {
   error: string | null;
   activeTag: string | null;
   tags: string[];
-  fetchArticlesByTag: (tag: string) => void;
+  fetchArticlesByTag: (tag: string, pageSize: number) => void;
 }

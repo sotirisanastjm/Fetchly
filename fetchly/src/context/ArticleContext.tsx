@@ -1,5 +1,6 @@
 'use client';
 
+import { fetchArticles } from "@/services/fetchArticles";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const ArticlesContext = createContext<ArticlesContextProps | undefined>(undefined);
@@ -16,11 +17,11 @@ export const ArticlesProvider: React.FC<{ children: React.ReactNode; initialArti
 
   const tags = ['angular', 'nextjs', 'react', 'typescript', 'javaScript', 'tailwind', 'nodeJs', 'webdev'];
 
-  const fetchArticlesByTag = async (tag: string) => {
+  const fetchArticlesByTag = async (tag: string, pageSize: number) => {
     setLoading(true);
     setActiveTag(tag);
     try {
-      const res = await fetch(`https://dev.to/api/articles?tag=${encodeURIComponent(tag.toLowerCase())}&per_page=6`);
+      const res = await fetchArticles(tag, pageSize);
       if (!res.ok) throw new Error("Failed to fetch articles");
       const data: Article[] = await res.json();
       setArticles(data);
