@@ -8,7 +8,7 @@ export default function ArticleGrid() {
     const { articles, tags, loading, activeTag, fetchArticlesByTag } = useArticles();
 
     return (
-        <section className='container mx-auto px-4 lg:px-0'>
+        <section className='container mx-auto px-4 2xl:px-0'>
             <h2 className='text-xl lg:text-4xl mb-4 font-bold'>Latest Tech News</h2>
             <div className='mb-8 flex flex-wrap gap-2'>
                 {tags.map((tag) => (
