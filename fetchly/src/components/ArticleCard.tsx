@@ -47,7 +47,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     };
 
     return (
-        <Link href={article.url}>
+        <Link href={'/articles/'+article.id}>
             <div className="relative hover:scale-[1.03] hover:shadow-xl shadow-black/50 duration-300 transition-all px-10 h-full py-8 min-h-[200px] bg-slate-dark rounded-3xl">
                 <div className="flex flex-col h-full gap-4 justify-between">
                     <div className="flex flex-row gap-2 justify-between">
