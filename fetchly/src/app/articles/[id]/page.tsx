@@ -16,9 +16,7 @@ async function getArticle(id: string): Promise<ArticlePage | null> {
 }
 
 export default async function ArticlePage({ params }: { params: { id: string } }) {
-    const awaitedParams = await params;
-    const id = awaitedParams.id;
-
+    const { id } = params;
     const article = await getArticle(id);
 
     if (!article) return <div>Article not found.</div>;
@@ -44,7 +42,7 @@ export default async function ArticlePage({ params }: { params: { id: string } }
                     </div>
                 </div>
             </section>
-
+            
             <section className='container mx-auto lg:mt-12 px-4 2xl:px-0'>
                 <Breadcrumb text={article.url} />
                 <Article url={article.url} text={article.body_html} />
