@@ -11,6 +11,20 @@ type Article = {
   };
 };
 
+interface ArticlePage {
+  id: number;
+  title: string;
+  description: string;
+  url: string;
+  tag_list: string[];
+  published_at: Date;
+  body_html: string;
+  user: {
+    name: string;
+    profile_image: string;
+  };
+};
+
 interface ArticlesContextProps {
   articles: Article[];
   loading: boolean;
