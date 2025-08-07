@@ -1,0 +1,119 @@
+.article {
+    @apply mx-auto text-lg text-gray-300 lg:w-[75%] space-y-4;
+
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply font-bold text-white mb-4 mt-[64px];
+    }
+
+    h1 {
+        @apply text-2xl lg:text-5xl;
+    }
+
+    h2 {
+        @apply text-xl lg:text-4xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    h4,
+    h5 {
+        @apply text-xl;
+    }
+
+    img {
+        @apply brightness-75 max-w-[800px] object-cover mx-auto my-[48px];
+    }
+
+
+    .highlight__panel.js-actions-panel {
+        display: none;
+    }
+
+
+    .highlight.js-code-highlight {
+        margin: 48px 0px;
+        padding: 16px;
+        position: relative;
+        background-color: #1c262e;
+        border-radius: 8px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+        font-family: 'Fira Code', monospace, monospace;
+        font-size: 14px;
+        color: #ddd;
+        overflow: auto;
+        max-height: 400px;
+
+        scrollbar-width: thin;
+        /* Firefox */
+        scrollbar-color: #555 #1e1e1e;
+        /* Firefox: thumb, track */
+
+        &::-webkit-scrollbar {
+            height: 8px;
+            /* horizontal scrollbar height */
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #1e1e1e;
+            /* track color */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #555;
+            /* scrollbar thumb */
+            border-radius: 4px;
+            border: 2px solid #1e1e1e;
+            /* space around thumb */
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #888;
+        }
+
+        pre.highlight {
+            margin: 0;
+            padding: 1rem 1.5rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+            outline: none;
+        }
+
+        .nf {
+            color: #61dafb;
+        }
+
+        .p {
+            color: #ccc;
+        }
+
+        .kr {
+            color: #d19a66;
+        }
+
+        .dl {
+            color: #98c379;
+        }
+
+        .nx {
+            color: #c678dd;
+        }
+
+        .na {
+            color: #e5c07b;
+        }
+
+        code {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: inherit;
+            background: none;
+            padding: 0;
+        }
+    }
+
+}

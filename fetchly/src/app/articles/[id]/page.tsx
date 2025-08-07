@@ -1,7 +1,9 @@
+import Article from '@/components/Article';
+import Breadcrumb from '@/components/Breadcrumb';
 import React from 'react';
 
 
-async function getArticle(id: string): Promise<Article | null> {
+async function getArticle(id: string): Promise<ArticlePage | null> {
     try {
         const res = await fetch(`https://dev.to/api/articles/${id}`, {
             next: { revalidate: 60 },
@@ -40,8 +42,10 @@ export default async function ArticlePage({ params }: { params: { id: string } }
                     </div>
                 </div>
             </section>
+            
             <section className='container mx-auto lg:mt-12 px-4 2xl:px-0'>
-                <div>{article.description}</div>
+                <Breadcrumb text={article.url} />
+                <Article url={article.url} text={article.body_html} />
             </section>
         </>
     );
@@ -65,9 +69,9 @@ function hexToRgb(hex: string): string {
 }
 
 const approvedPalette = [
-    '#1c262e',
+    '#2e404f',
     '#293642',
-    '#141a1f',
     '#21364a',
-    '#0f1a24',
+    '#1b3c59',
+    '#0b2c61',
 ];

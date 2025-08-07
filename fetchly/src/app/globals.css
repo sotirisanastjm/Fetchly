@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import '../assets/scss/navigation.scss';
+@import '../assets/scss/article.scss';
+
 
 
 @layer utilities {
