@@ -1,6 +1,5 @@
 import Article from '@/components/Article';
 import Breadcrumb from '@/components/Breadcrumb';
-import { PageProps } from '@/models/types';
 import React from 'react';
 
 
@@ -16,9 +15,8 @@ async function getArticle(id: string): Promise<ArticlePage | null> {
     }
 }
 
-export default async function ArticlePage({ params }: PageProps) {
-    const { id } = params;
-
+export default async function ArticlePage({params}: {params: Promise<{ id: string }>}) {
+    const { id } = await params;
     const article = await getArticle(id);
 
     if (!article) return <div>Article not found.</div>;
