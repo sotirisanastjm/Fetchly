@@ -1,25 +1,69 @@
 # Fetchly
 
-**Fetchly** is a minimal and modern web app built with **Next.js** and **Tailwind CSS**, designed for developers to discover the latest tech news and articles based on their favorite technologies.
+**Fetchly** is a clean, minimal, and modern web app built with **Next.js**, **Tailwind CSS**, and **TypeScript**, designed to help developers stay updated with the latest tech articles from [Dev.to](https://dev.to/).
 
-The goal is to create a clean reading experience with tag-based filtering using the [Dev.to API](https://docs.dev.to/api/).
+The app focuses on providing a smooth reading experience with **tag-based filtering**, **dynamic article routing**, and the ability to **save articles for later**.
+
+---
+
+## ✨ Features
+
+- 🔍 Browse articles by technology tags (e.g., #react, #javascript, #webdev)
+- 📄 Read articles directly on Fetchly or open the original post on Dev.to
+- 💾 Save articles to read later
+- ❌ Remove saved articles anytime
+- ⚡️ Fast, responsive design with skeleton loaders for content
+- 🌙 Dark-themed UI for a focused developer experience
 
 ---
 
 ## 🚧 Project Status
 
-This project is a **work in progress**. The core features are being implemented gradually, starting with:
+The project is **actively being developed**. Current stable features include:
 
-- Fetching articles by tag
-- Skeleton loaders during data loading
-- Responsive layout
+- ✅ Article fetching via Dev.to Public API
+- ✅ Dynamic routing for article pages
+- ✅ Responsive layout for all devices
+- ✅ Save/remove articles from local reading list
+
+Planned improvements:
+- Persistent saved articles (e.g., via localStorage or backend)
+- Tag suggestions and custom tag input
+- Pagination or infinite scrolling
 
 ---
 
-## 💡 Tech Stack
+## 🛠 Tech Stack
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Dev.to Public API
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Dev.to API](https://docs.dev.to/api/)
+
+---
+
+## 🌐 Live Demo
+
+👉 [Visit Fetchly](https://fetchlynews.netlify.app/)
+
+---
+
+## 📸 Screenshots
+
+> *Coming soon – or drop a few screenshots in the `public/` folder and add them here!*
+
+---
+
+## 📂 Folder Structure
+
+```bash
+src/
+│
+├── app/                 # Next.js app directory
+│   ├── articles/        # Dynamic routes for individual articles
+│   └── saved/           # Saved articles page
+│
+├── components/          # Reusable UI components
+├── lib/                 # Helper functions and API logic
+└── styles/              # Global styles and Tailwind config
