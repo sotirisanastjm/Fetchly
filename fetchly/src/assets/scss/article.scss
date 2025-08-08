@@ -119,6 +119,7 @@
     .table-wrapper-paragraph {
         overflow-x: auto;
         margin: 1.5rem 0;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 
         table {
             width: 100%;
@@ -127,7 +128,7 @@
             background-color: #1c262e;
             color: #ffffff;
             border-radius: 8px;
-            overflow: hidden; 
+            overflow: hidden;
         }
 
         thead {
