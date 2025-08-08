@@ -6,6 +6,12 @@ The app focuses on providing a smooth reading experience with **tag-based filter
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Visit Fetchly](https://fetchlynews.netlify.app/)
+
+---
+
 ## ✨ Features
 
 - 🔍 Browse articles by technology tags (e.g., #react, #javascript, #webdev)
@@ -43,27 +49,3 @@ Planned improvements:
 
 ---
 
-## 🌐 Live Demo
-
-👉 [Visit Fetchly](https://fetchlynews.netlify.app/)
-
----
-
-## 📸 Screenshots
-
-> *Coming soon – or drop a few screenshots in the `public/` folder and add them here!*
-
----
-
-## 📂 Folder Structure
-
-```bash
-src/
-│
-├── app/                 # Next.js app directory
-│   ├── articles/        # Dynamic routes for individual articles
-│   └── saved/           # Saved articles page
-│
-├── components/          # Reusable UI components
-├── lib/                 # Helper functions and API logic
-└── styles/              # Global styles and Tailwind config
