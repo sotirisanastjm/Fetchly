@@ -116,4 +116,52 @@
         }
     }
 
+    .table-wrapper-paragraph {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background-color: #1c262e;
+    color: #ffffff;
+
+    thead {
+      background-color: #313d48;
+
+      th {
+        text-align: left;
+        padding: 0.75rem 1rem;
+        font-weight: bold;
+        border-bottom: 2px solid #313d48;
+        white-space: nowrap;
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #313d48;
+        }
+
+        td {
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid #313d48;
+          vertical-align: top;
+
+          code {
+            background-color: #d4d3d3;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+}
+
 }
